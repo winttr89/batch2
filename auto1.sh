@@ -5,8 +5,8 @@ wget -O batch.json https://raw.githubusercontent.com/winttr89/batch2/main/batch.
 wget -O batch2.json https://raw.githubusercontent.com/winttr89/batch2/main/batch2.json
 az provider register --namespace Microsoft.Batch --subscription "$sub"
 az group create --name batchacc$ran --location westus2 --subscription "$sub"
-echo "sleep 10s..."
-sleep 10s
+echo "sleep 15s..."
+sleep 15s
 nnn=`head /dev/urandom | tr -dc a-z0-9 | fold -w 14 | head -n 1`
 batch=0
 for region in australiaeast canadacentral centralindia centralus eastus eastus2 francecentral japaneast koreacentral northeurope southcentralus southeastasia switzerlandnorth uksouth westcentralus westeurope westus westus2 westus3
