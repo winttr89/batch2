@@ -15,8 +15,8 @@ do
 	batch=$(( $batch + 1 ))
 	az batch account create --subscription "$sub" --name a$batch$nnn --resource-group batchacc$ran --location $region --no-wait
 done
-echo "sleep 6m..."
-sleep 6m
+echo "sleep 2m..."
+sleep 2m
 batch=0
 echo "Batch account setting..."
 for region in australiaeast canadacentral centralindia centralus eastus eastus2 francecentral japaneast koreacentral northeurope southcentralus southeastasia switzerlandnorth uksouth westcentralus westeurope westus westus2 westus3
