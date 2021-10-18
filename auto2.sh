@@ -1,5 +1,5 @@
 #!/bin/bash
-sub="7a70fe32-afc9-4e0a-a170-6def69f6bfca"
+sub="e563fded-3f26-4d66-bf32-4881a0f4bca7"
 ran=`head /dev/urandom | tr -dc a-z0-9 | fold -w 3 | head -n 1`
 wget -O batch.json https://raw.githubusercontent.com/winttr89/batch2/main/batch.json
 wget -O batch2.json https://raw.githubusercontent.com/winttr89/batch2/main/batch2.json
